@@ -1,8 +1,9 @@
+"use client";
 import { Header } from "@/components/Header";
 import hydra from "@/hydra-client";
-import { HydraChat } from "hydra-ai";
+import { HydraChat } from "hydra-ai-backup";
 
-const Page = async () => {
+const Page = () => {
   return (
     <div className="container mx-auto px-5 mb-10">
       <Header />
@@ -15,6 +16,7 @@ const Page = async () => {
             type: "text",
           },
         ]}
+        inputTextColor="white"
       />
     </div>
   );

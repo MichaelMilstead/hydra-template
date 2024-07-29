@@ -1,5 +1,6 @@
 import { HydraClient } from "hydra-ai-backup";
 import { ProfileCardList } from "./components/hydra-components/profile-card-list";
+import { SendMessageFormList } from "./components/hydra-components/send-message-form-list";
 import { getProfiles } from "./services/profile-service";
 
 const hydra = new HydraClient();
@@ -12,5 +13,9 @@ hydra.registerComponent(
   },
   getProfiles
 );
+
+hydra.registerComponent("SendMessageFormList", SendMessageFormList, {
+  messages: "{id: string, to: string, message: string}[]",
+});
 
 export default hydra;
