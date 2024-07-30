@@ -35,7 +35,7 @@ export default function SendMessageForm({ message }: SendMessageFormProps) {
   };
 
   return (
-    <Card className="w-full max-w-md mx-5">
+    <Card className="w-full max-w-md mx-5 min-w-64">
       {!isSent && (
         <CardHeader>
           <CardTitle>Send Message</CardTitle>
