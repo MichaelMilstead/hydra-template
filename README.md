@@ -31,25 +31,31 @@ Before you begin, ensure you have met the following requirements:
 
 ### Installation
 
-1. Clone the repository:
+1. Clone a copy of the repository:
+
+   Get a copy of this repository by clicking the "Use this template" button:
+
+   ![UseTemplateButton](https://i.imgur.com/eyUyEi2.png)
+
+   Then, clone your new repo:
 
    ```bash
-   https://github.com/MichaelMilstead/hydra-template.git
+   https://github.com/<Your Username>/<Your repo name>.git
 
-   cd hydra-ai-template
+   cd your-repo-name
    ```
 
 ### Run the App
 
 1. Add OpenAI Key:
 
-Create a file called `.env.local` under `/src/`.
+   Create a file called `.env.local` under `/src/`.
 
-Add your OpenAI Key, like:
+   Add your OpenAI Key, like:
 
-```bash
-OPENAI_API_KEY=<your key>
-```
+   ```bash
+   OPENAI_API_KEY=<your key>
+   ```
 
 2. Install dependencies:
 
