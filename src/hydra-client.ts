@@ -1,4 +1,4 @@
-import { HydraClient } from "hydra-ai-backup";
+import { HydraClient } from "hydra-ai";
 import { ProfileCardList } from "./components/hydra-components/profile-card-list";
 import { SendMessageFormList } from "./components/hydra-components/send-message-form-list";
 import { getProfiles } from "./services/profile-service";

@@ -1,7 +1,7 @@
 "use client";
 import { Header } from "@/components/Header";
 import hydra from "@/hydra-client";
-import { HydraChat } from "hydra-ai-backup";
+import { HydraChat } from "hydra-ai";
 
 const Page = () => {
   return (
