@@ -32,25 +32,37 @@ Before you begin, ensure you have met the following requirements:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    https://github.com/MichaelMilstead/hydra-template.git
+
    cd hydra-ai-template
    ```
 
 ### Run the App
 
-1. Install dependencies:
+1. Add OpenAI Key:
+
+Create a file called `.env.local` under `/src/`.
+
+Add your OpenAI Key, like:
+
+```bash
+OPENAI_API_KEY=<your key>
+```
+
+2. Install dependencies:
 
    ```bash
    npm i
    ```
 
-2. Run the app locally:
+3. Run the app locally:
 
    ```bash
    npm run dev
    ```
 
-3. Go to localhost:3000 to see the running app:
+4. Go to localhost:3000 to see the running app:
 
 ![Screenshot](https://i.imgur.com/a0RW6v1.png)
