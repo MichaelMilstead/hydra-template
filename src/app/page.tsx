@@ -1,28 +1,32 @@
 "use client";
 import { Header } from "@/components/Header";
 import hydra from "@/hydra-client";
-import { HydraChat } from "hydra-ai";
+import { HydraChat, useHydraChat } from "@/components/chat/Chat";
+import { HydraChatInput } from "@/components/chat/Chat-Input";
 
 const Page = () => {
+  const {
+    inputMessage,
+    setInputMessage,
+    isLoading,
+    messageHistory,
+    handleSendMessage,
+  } = useHydraChat(hydra, [], "Hydra");
+
   return (
     <div className="container h-[100dvh] mx-auto px-5 pb-10 flex flex-col justify-center items-center">
       <Header />
-      <div className="flex-grow min-h-[400px] overflow-y-auto text-xs w-full max-w-2xl rounded-lg bg-secondary">
-        <HydraChat
-          hydraClient={hydra}
-          initialMessages={[
-            {
-              sender: "Hydra",
-              message: `I am a Hydra-powered AI agent.`,
-              type: "text",
-            },
-          ]}
-          inputBackgroundColor="#343437"
-          inputTextColor="white"
-          loadingIconColor="gray"
-          aiIconColor="#70bfae"
-        />
-      </div>
+      <HydraChat
+        hydraClient={hydra}
+        initialMessages={messageHistory}
+        aiName="Hydra"
+      />
+      <HydraChatInput
+        inputMessage={inputMessage}
+        setInputMessage={setInputMessage}
+        handleSendMessage={handleSendMessage}
+        inputPlaceholder="Type your message here..."
+      />
     </div>
   );
 };
