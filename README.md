@@ -49,10 +49,9 @@ Before you begin, ensure you have met the following requirements:
 
 1. Add OpenAI Key:
 
-   Create a file called `.env.local` under `/src/`.
+   Rename `.env.example` to `.env.local` and add your openai-key.  
 
-   Add your OpenAI Key, like:
-
+   It should look like this:
    ```bash
    OPENAI_API_KEY=<your key>
    ```
