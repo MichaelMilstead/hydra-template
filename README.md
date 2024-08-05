@@ -23,13 +23,9 @@ Get this app running and try adding/changing components to get ideas for how you
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Run the App](#run-the-app)
-<<<<<<< HEAD
-  - [Customize](#customize)
-=======
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
->>>>>>> ca76df3 (improved read me.)
 
 ## About this Template
 
@@ -39,7 +35,6 @@ The home page is under `/src/app/page.tsx`, and this is where you'll see the `<H
 
 The instance of HydraClient is created in `/src/hydra-client.ts`, and this is also where components are registered with Hydra. If you want to add your own components for Hydra to control, this is where you'll register them.
 
-<<<<<<< HEAD
 ### The Template Components
 
 When using `hydra-ai`, you register a set of components with Hydra that can then be used by Hydra when `generateComponent(context)` is called. In this template project, the components that are registered with Hydra can be found under `/src/components/hydra-components` and are:
@@ -100,10 +95,7 @@ When using `hydra-ai`, you register a set of components with Hydra that can then
 
     You'll notice that these are both "list" components that each render some number of a "base" component. There's no need for us to also register the "base" component with Hydra, since it can generate a list of one if needed.
 
-## Get Started
-=======
 ## Getting Started
->>>>>>> ca76df3 (improved read me.)
 
 ### Prerequisites
 
@@ -132,11 +124,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Add OpenAI Key:
 
-<<<<<<< HEAD
-   Rename `.env.example` to `.env.local` and add your openai-key.
-=======
    Rename `.env.example` to `.env.local` and add your OpenAI API key.  
->>>>>>> ca76df3 (improved read me.)
 
    It should look like this:
 
@@ -157,8 +145,6 @@ Before you begin, ensure you have met the following requirements:
    ```
 
 4. Go to http://localhost:3000 to see the running app:
-
-<<<<<<< HEAD
    ![no-message](https://i.imgur.com/a0RW6v1.png)
 
 5. Try inputting messages that might prompt Hydra to use one of the registered components.
@@ -174,7 +160,6 @@ Before you begin, ensure you have met the following requirements:
 ### Customize
 
 Try creating your own components and registering them with Hydra under `hydra-client.ts`!
-=======
 ![Screenshot](https://i.imgur.com/a0RW6v1.png)
 
 ## Deployment
@@ -192,4 +177,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
->>>>>>> ca76df3 (improved read me.)
