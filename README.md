@@ -170,6 +170,10 @@ To deploy your app to Vercel, click the button below:
 
 Make sure to set up your environment variables, including the `OPENAI_API_KEY`, in your Vercel project settings.
 
+## Have a question?
+Join the discord to chat with other users and the developers.
+<p><a href="https://discord.gg/8RMRUPZ9RS"><img src="https://img.shields.io/discord/1251581895414911016?color=7289da&label=discord" alt="Discord"></a><p>
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
