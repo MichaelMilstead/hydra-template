@@ -3,19 +3,36 @@ import { ProfileCardList } from "./components/hydra-components/profile-card-list
 import { SendMessageFormList } from "./components/hydra-components/send-message-form-list";
 import { getProfiles } from "./services/profile-service";
 
-const hydra = new HydraClient();
-
-hydra.registerComponent(
-  "ProfileCardList",
-  ProfileCardList,
-  {
-    profiles: "{id: string, name: string, imageUrl: string, about: string}[]",
-  },
-  getProfiles
-);
-
-hydra.registerComponent("SendMessageFormList", SendMessageFormList, {
-  messages: "{id: string, to: string, message: string}[]",
+const hydra = new HydraClient({
+  hydraApiKey: "<key here>"
 });
 
-export default hydra;
+const getProfilesTool = {
+  getComponentContext: getProfiles,
+  definition: {
+    name: "getProfiles",
+    description: "Get the profiles of users.",
+    parameters: [],
+  },
+};
+
+export const initHydraRegistration = async () => {
+  await Promise.all([
+
+  hydra.registerComponent(
+    "ProfileCardList",
+    "A list of profile cards",
+    ProfileCardList,
+    {
+      profiles: "{id: string, name: string, imageUrl: string, about: string}[]",
+    },
+    [getProfilesTool]
+  ),
+
+  hydra.registerComponent("SendMessageFormList", "A list of send message forms", SendMessageFormList, {
+    messages: "{id: string, to: string, message: string}[]",
+    }),
+  ]);
+}
+
+export default hydra

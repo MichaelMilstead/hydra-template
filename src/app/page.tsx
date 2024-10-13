@@ -1,20 +1,24 @@
 "use client";
 import { Header } from "@/components/Header";
-import hydra from "@/hydra-client";
+import hydra, { initHydraRegistration } from "@/hydra-client";
 import { HydraChat } from "hydra-ai";
+import { useEffect } from "react";
 
 const Page = () => {
+  useEffect(() => {
+    initHydraRegistration();
+  }, []);
+
   return (
     <div className="container h-[100dvh] mx-auto px-5 pb-10 flex flex-col justify-center items-center">
       <Header />
-      <div className="flex-grow min-h-[400px] overflow-y-auto text-xs w-full max-w-2xl rounded-lg bg-secondary">
+      <div className="flex-grow min-h-[400px] overflow-y-auto text-md w-full max-w-8xl rounded-lg bg-secondary">
         <HydraChat
           hydraClient={hydra}
           initialMessages={[
             {
               sender: "Hydra",
-              message: `I am a Hydra-powered AI agent.`,
-              type: "text",
+              message: `Try asking something like "Show me users who like to hike." Hydra will figure out the correct component to use, and the data to fill it with.`,
             },
           ]}
           inputBackgroundColor="#343437"
