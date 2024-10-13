@@ -59,7 +59,7 @@ When using `hydra-ai`, you register a set of components with Hydra that can then
 
     This is an example of a component that Hydra needs additional data to use. In this case, Hydra needs to know about the list of Profiles in the system before it can choose which of them to fill the component with based on context.
 
-    To enable that, we pass `getProfiles` to the `getComponentContext` parameter of `registerComponent`.
+    To enable that, we pass the `getProfilesTool` to the `contextTools` parameter of `registerComponent`.
 
     #### Get Hydra to use this Component:
 
@@ -122,15 +122,7 @@ Before you begin, ensure you have met the following requirements:
 
 ### Run the App
 
-1. Add OpenAI Key:
-
-   Rename `.env.example` to `.env.local` and add your OpenAI API key.  
-
-   It should look like this:
-
-   ```bash
-   OPENAI_API_KEY=<your key>
-   ```
+1. Get your Hydra API key (unless self-hosting the backend)
 
 2. Install dependencies:
 
@@ -167,8 +159,6 @@ Try creating your own components and registering them with Hydra under `hydra-cl
 To deploy your app to Vercel, click the button below:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world&env=OPENAI_API_KEY)
-
-Make sure to set up your environment variables, including the `OPENAI_API_KEY`, in your Vercel project settings.
 
 ## Have a question?
 Join the discord to chat with other users and the developers.
